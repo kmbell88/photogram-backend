@@ -281,8 +281,8 @@ exports.user_upload_profile_picture = async (req, res, next) => {
   }
   try {
     Users.findOneAndUpdate({ _id: req.body.userId },
-      { $set: { profPic: `${process.env.BASE_URL}${filename}`,
-                profIcon: `${process.env.BASE_URL}icon-${filename}`} },
+      { $set: { profPic: `${process.env.BASE_URL}uploads/${filename}`,
+                profIcon: `${process.env.BASE_URL}uploads/icon-${filename}`} },
         function (error, success) {
           if (error) {
             res.status(500).json({ error: "An error occurred while uploading profile picture"});
