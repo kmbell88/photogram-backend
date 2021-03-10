@@ -1,6 +1,5 @@
 const multer = require('multer');
 const storage = multer.memoryStorage();
-// const uploads = multer({ storage });
 
 const fileFilter = (req, file, cb) => {
   // Reject file
