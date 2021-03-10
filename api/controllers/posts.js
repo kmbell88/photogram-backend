@@ -162,7 +162,7 @@ exports.posts_create_post = async (req, res, next) => {
     const post = new Posts({
       _id: postId,
       postBody: {
-        imgUrl: `${process.env.BASE_URL}/${filename}`,
+        imgUrl: `${process.env.BASE_URL}${filename}`,
         description: req.body.description,
         postedBy: req.body.userId
       }
